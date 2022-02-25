@@ -23,7 +23,7 @@ android {
     buildTypes {
         debug {
             buildConfigField 'String', 'SERVER_BASE_URL', '"https://api.github.com/"'
-            buildConfigField 'String', 'APP_TOKEN', '"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"'
+            buildConfigField 'String', 'APP_TOKEN', '"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"'
             minifyEnabled false
             debuggable true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
@@ -31,7 +31,7 @@ android {
 
         release {
             buildConfigField 'String', 'SERVER_BASE_URL', '"https://api.github.com/"'
-            buildConfigField 'String', 'APP_TOKEN', '"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"'
+            buildConfigField 'String', 'APP_TOKEN', '"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"'
             minifyEnabled true
             debuggable false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
