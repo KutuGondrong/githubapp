@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name" translatable="false">"Assessment Hedy Simamora</string>
+    <string name="welcome_message">Welcome... Assessment Hedy Simamora</string>
+    <string name="could_not_be_load">Could not be load</string>
+    <string name="retry">Retry</string>
+    <string name="followers">Followers</string>
+    <string name="following">Following</string>
+    <string name="hint_search">Search User Github.....</string>
+</resources>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_user_github"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imgIcon"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_default_avatar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtFullName"
+        style="@style/Text20SPBlackBold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="35dp"
+        android:ellipsize="end"
+        android:gravity="start"
+        android:text="Wang Shi Eun"
+        app:layout_constraintStart_toEndOf="@+id/imgIcon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtUserName"
+        style="@style/Text14SPBlackNormal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="4dp"
+        android:ellipsize="end"
+        android:gravity="start"
+        android:text="\@wangguan"
+        app:layout_constraintStart_toEndOf="@+id/imgIcon"
+        app:layout_constraintTop_toBottomOf="@+id/txtFullName" />
+
+    <TextView
+        android:id="@+id/txtDescription"
+        style="@style/Text14SPBlackNormal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="24dp"
+        android:ellipsize="end"
+        android:gravity="start"
+        android:text="Director of Mihoyo Company, Director of Mobile @mihoyo. DevRel. Engineerin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgIcon"
+        app:layout_constraintTop_toBottomOf="@+id/txtUserName" />
+
+    <ImageView
+        android:id="@+id/imgFollower"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_following"
+        app:layout_constraintStart_toEndOf="@+id/imgIcon"
+        app:layout_constraintTop_toBottomOf="@+id/txtDescription" />
+
+    <TextView
+        android:id="@+id/txtCountFollower"
+        style="@style/Text14SPColor333333Bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:ellipsize="end"
+        android:gravity="start"
+        android:text="12K"
+        app:layout_constraintBottom_toBottomOf="@+id/imgFollower"
+        app:layout_constraintStart_toEndOf="@+id/imgFollower"
+        app:layout_constraintTop_toTopOf="@+id/imgFollower" />
+
+    <TextView
+        android:id="@+id/txtLabelFollower"
+        style="@style/Text14SPColor333333Normal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:ellipsize="end"
+        android:gravity="start"
+        android:text="@string/followers"
+        app:layout_constraintBottom_toBottomOf="@+id/txtCountFollower"
+        app:layout_constraintStart_toEndOf="@+id/txtCountFollower"
+        app:layout_constraintTop_toTopOf="@+id/txtCountFollower" />
+
+    <TextView
+        android:id="@+id/txtCountFollowing"
+        style="@style/Text14SPColor333333Bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:ellipsize="end"
+        android:gravity="start"
+        android:text="120"
+        app:layout_constraintBottom_toBottomOf="@+id/imgFollower"
+        app:layout_constraintStart_toEndOf="@+id/txtLabelFollower"
+        app:layout_constraintTop_toTopOf="@+id/imgFollower" />
+
+    <TextView
+        android:id="@+id/txtLabelFollowing"
+        style="@style/Text14SPColor333333Normal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:ellipsize="end"
+        android:gravity="start"
+        android:text="@string/following"
+        
+        app:layout_constraintBottom_toBottomOf="@+id/txtCountFollowing"
+        app:layout_constraintStart_toEndOf="@+id/txtCountFollowing"
+        app:layout_constraintTop_toTopOf="@+id/txtCountFollowing" />
+
+    <ImageView
+        android:id="@+id/imgCity"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_city"
+        app:layout_constraintStart_toEndOf="@+id/imgIcon"
+        app:layout_constraintTop_toBottomOf="@+id/imgFollower" />
+
+    <TextView
+        android:id="@+id/txtCity"
+        style="@style/Text14SPColor333333Normal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:ellipsize="end"
+        android:gravity="start"
+        android:text="Taipei, Taiwan"
+        app:layout_constraintBottom_toBottomOf="@+id/imgCity"
+        app:layout_constraintStart_toEndOf="@+id/imgCity"
+        app:layout_constraintTop_toTopOf="@+id/imgCity" />
+
+    <ImageView
+        android:id="@+id/imgEmail"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="21dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_email"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgIcon"
+        app:layout_constraintTop_toBottomOf="@+id/imgCity" />
+
+    <TextView
+        android:id="@+id/txtEmail"
+        style="@style/Text14SPColor333333Normal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:ellipsize="end"
+        android:gravity="start"
+        android:text="wangshi@mihoyo.comTaipei, Taiwan"
+        app:layout_constraintBottom_toBottomOf="@+id/imgEmail"
+        app:layout_constraintStart_toEndOf="@+id/imgEmail"
+        app:layout_constraintTop_toTopOf="@+id/imgEmail" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

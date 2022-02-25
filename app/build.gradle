@@ -1,0 +1,133 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'kotlin-android-extensions'
+    id 'androidx.navigation.safeargs'
+    id 'dagger.hilt.android.plugin'
+}
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        applicationId "com.kutugondrong.github"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+        testInstrumentationRunner rootProject.ext.testInstrumentationRunner
+    }
+
+    buildTypes {
+        debug {
+            buildConfigField 'String', 'SERVER_BASE_URL', '"https://api.github.com/"'
+            buildConfigField 'String', 'APP_TOKEN', '"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"'
+            minifyEnabled false
+            debuggable true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        release {
+            buildConfigField 'String', 'SERVER_BASE_URL', '"https://api.github.com/"'
+            buildConfigField 'String', 'APP_TOKEN', '"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"'
+            minifyEnabled true
+            debuggable false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+    }
+}
+
+dependencies {
+    implementation rootProject.kotlin_stdlib
+    implementation rootProject.core_ktx
+    implementation rootProject.appcompat
+    implementation rootProject.material
+    implementation rootProject.constraintlayout
+
+    implementation rootProject.navigation_fragment_ktx
+    implementation rootProject.navigation_ui_ktx
+    implementation rootProject.legacy_support
+    implementation rootProject.recyclerview
+
+    implementation rootProject.coordinatorlayout
+
+    implementation rootProject.hilt_android
+    kapt rootProject.android_compiler
+    implementation rootProject.hilt_lifecycle_viewmodel
+    kapt rootProject.hilt_compiler
+
+    implementation rootProject.retrofit
+    implementation rootProject.converter_gson
+    implementation rootProject.okhttp
+    implementation rootProject.logging_interceptor
+
+    implementation rootProject.paging_runtime_ktx
+
+    implementation rootProject.glide
+
+    implementation rootProject.room_runtime
+    annotationProcessor rootProject.room_compiler
+    implementation rootProject.room_ktx
+    kapt rootProject.room_compiler
+
+    implementation rootProject.multidex
+
+    implementation rootProject.fragment_ktx
+    
+
+    implementation project(':data')
+
+    androidTestImplementation "androidx.room:room-testing:$roomVersion"
+
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-contrib:3.3.0'
+    androidTestImplementation 'androidx.test:runner:1.4.0'
+    androidTestImplementation 'androidx.test:rules:1.4.0'
+
+    // Testing fragment
+    debugImplementation "androidx.fragment:fragment-testing:$fragment_version"
+
+    kaptTest "com.google.dagger:hilt-android-compiler:$hilt_version"
+    testImplementation "com.google.dagger:hilt-android-testing:$hilt_version"
+    androidTestImplementation "com.google.dagger:hilt-android-testing:$hilt_version"
+    kaptAndroidTest "com.google.dagger:hilt-android-compiler:$hilt_version"
+
+
+    androidTestImplementation "androidx.navigation:navigation-testing:$nav_version"
+
+    testImplementation "androidx.arch.core:core-testing:2.1.0"
+    androidTestImplementation "androidx.arch.core:core-testing:2.1.0"
+
+    implementation 'androidx.test.espresso:espresso-idling-resource:3.4.0'
+    androidTestImplementation "com.squareup.okhttp3:mockwebserver:4.6.0"
+    androidTestImplementation 'com.jakewharton.espresso:okhttp3-idling-resource:1.0.0'
+}
+
+kapt {
+    correctErrorTypes true
+}
